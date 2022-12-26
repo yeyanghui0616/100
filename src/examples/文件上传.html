@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="myDiv"></div>
+    <!-- 创建文件上传控件 -->
+    <input type="file" id="file-upload" />
+
+    <!-- 监听文件上传控件的 change 事件 -->
+    <script>
+        // document.getElementById('file-upload').addEventListener('change', (event) => {
+        //     // 获取文件
+        //     const file = event.target.files[0];
+
+        //     // 将文件转换为二进制数据
+        //     const reader = new FileReader();
+        //     reader.readAsBinaryString(file);
+
+        //     // 当文件读取完成时，将文件数据上传到后端
+        //     reader.addEventListener('load', () => {
+        //         const data = reader.result;
+        //         // 发送请求到后端
+        //         console.log('data',data)
+        //     });
+        // });
+
+
+
+        const inputElement = document.getElementById('file-upload');
+
+        inputElement.addEventListener('change', handleFiles, false);
+
+        function handleFiles() {
+            const file = this.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function (e) {
+                // 读取文件完成，在这里处理文件内容
+                const content = e.target.result;
+                document.getElementById("myDiv").innerHTML = content;
+                console.log('content',content);
+            }
+
+            reader.readAsText(file);
+        }
+    </script>
+
+</body>
+
+</html>
