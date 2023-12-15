@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>card</title>
+
+    <style>
+        html{
+            height: 100vh;
+            background-color: #ededed;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        hr{
+            margin: 0;
+        }
+        .outer{
+            width:550px;
+            padding:20px 50px;
+            background-color: #fff;
+        }
+        .outer .top{
+            height:80px;
+            font-size:32px;
+            display: flex;
+        }
+        .outer .top>div{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content: space-between;
+        }
+        .outer .top>div div:last-child{
+            font-size: 28px;
+        }
+        .outer .number{
+            font-size: 12px;
+            display: flex;
+            color:#f00;
+            flex-direction: row-reverse;
+        }
+        .outer .userInfo,
+        .outer .deptInfo{
+            padding: 12px 0;
+            display: flex;
+            gap: 30px;
+        }
+        .outer .content{
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+        }
+        .outer .content .box{
+            display: flex;
+        }
+        .outer .content .box .title{
+            display: inline-block;
+            text-align: justify;
+            text-align-last: justify;
+            width: 65px;
+            word-break: keep-all;
+        }
+
+        .outer .content .box .text{
+            flex:1;
+            word-break: break-all;
+        }
+        .outer .sign{
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        .outer .sign>div{
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <!-- 标题 -->
+        <div class="top">
+            <img src="./../assets/vue.svg" alt="">
+            <div>
+                <div>收到喀什东路卡实打实上</div>
+                <div>收到喀什东</div>
+            </div>
+        </div>
+        <div class="number">NO.0000000219012</div>
+        <hr></hr>
+        <!-- 个人信息 -->
+        <div class="userInfo">
+            <div>
+                <span>姓名</span>：
+                <span>XXX</span>
+            </div>
+            <div>
+                <span>性别</span>：
+                <span>男</span>
+            </div>
+            <div>
+                <span>年龄</span>：
+                <span>21</span>
+            </div>
+        </div>
+        <hr></hr>
+        <div class="userInfo">
+            <div>
+                <span>姓名性别</span>：
+                <span>XXX</span>
+            </div>
+            <div>
+                <span>性别性别</span>：
+                <span>男</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="box">
+                <span class="title">姓名性别</span>：
+                <span class="text">XXXXXXXXXXXXXX</span>
+            </div>
+            <div class="box">
+                <span class="title">性别</span>：
+                <span
+                    class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+            </div>
+            <div class="box">
+                <span class="title">姓名性别</span>：
+                <span
+                    class="text">XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX</span>
+            </div>
+        </div>
+        <!-- 署名 -->
+        <div  class="sign">
+            <div>
+                <span>姓名：XXX</span></span>
+                <span>2023年2月2日</span>
+            </div>
+        </div>
+        <hr>
+        </hr>
+        <div>XXXXXXXXXXXXXXXXXXXXXXXXX</div>
+        <div>XXXXXXXXXXXXXXXXXXXXXXXXX</div>
+    </div>
+</body>
+</html>
